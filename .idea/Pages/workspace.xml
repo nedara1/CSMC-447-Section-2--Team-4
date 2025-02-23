@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f3e001-2e9e-4786-91c1-3d2f96aea710" name="Changes" comment="Home Page 1.4">
-      <change beforePath="$PROJECT_DIR$/.idea/Pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pages/about.html" afterDir="false" />
-    </list>
+    <list default="true" id="96f3e001-2e9e-4786-91c1-3d2f96aea710" name="Changes" comment="Home Page 1.4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740258867874</updated>
-      <workItem from="1740258868921" duration="13454000" />
+      <workItem from="1740258868921" duration="13483000" />
     </task>
     <task id="LOCAL-00001" summary="Push 1">
       <option name="closed" value="true" />
@@ -149,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740337591233</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Home Page 1.4">
+      <option name="closed" value="true" />
+      <created>1740337641792</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740337641792</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
