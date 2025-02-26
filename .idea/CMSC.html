@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4YP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+<!DOCTYPE html>
+<head>
+  <title>PDF in HTML</title>
+</head>
+<style>
+  .pdf {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .pdf,
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h3 {
+    text-align: center;
+  }
+
+  h1 {
+    color: #fdb515;
+  }
+</style>
+
+<body>
+<h1>UMBC</h1>
+<h3>Offical UMBC 4Year Plan for CMSC</h3>
+
+<embed class="pdf"
+       src="CMSC4YR.pdf"
+       width="800" height="500">
+</body>
+
+<nav class="navbar">
+  <div class="navbar__container">
+    <a href="#umbc" id="navbar__logo">UMBC</a>
+    <div class="navbar__toggle" id="mobile-menu">
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="index.html" class="navbar__links" id="home-page">Home</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#about" class="navbar__links" id="about-page">About</a>
+      </li>
+      <li class="navbar__item">
+        <a href="CMSC.html" class="navbar__links" id="computer_science-page">Computer Science</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#computer_engineering" class="navbar__links" id="computer_engineering-page">Computer Engineering</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#chemical_engineering" class="navbar__links" id="chemical_engineering-page">Chemical Engineering</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#mechanical_engineering" class="navbar__links" id="mechanical_engineering-page">Mechanical Engineering</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#information_systems" class="navbar__links" id="information_systems-page">Information Systems</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#business_tech_admin" class="navbar__links" id="business_tech_admin-page">Business Technology Administration</a>
+      </li>
+      <li class="navbar__btn">
+        <a href="#custom" class="button" id="custom">Custom</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer__container">
+    <p>&copy; 2024 UMBC. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
