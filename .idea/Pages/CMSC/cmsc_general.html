@@ -11,12 +11,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: white;
         }
         .container {
             width: 90%;
             max-width: 1000px;
-            margin: 20px auto;
+            margin-top: 2060px;
             background: black;
             padding: 20px;
             border-radius: 8px;
@@ -29,18 +29,19 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
             color: white;
         }
+
         th, td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: left;
         }
         th {
-            background-color: #0073e6;
+            background-color: #black;
             color: white;
         }
+
         select {
             width: 100%;
             padding: 5px;
@@ -109,46 +110,100 @@
     </div>
     <div class="right-half">
         <div class="container">
-            <h1>Computer Science - Four Year Plan</h1>
+            <h1>Computer Science - General Track</h1>
+
             <h2>Year One</h2>
             <h3>Fall</h3>
-            <table>
-                <tr>
-                    <th>Course</th>
-                    <th>Credits</th>
-                    <th>Difficulty (out of 5)</th>
-                    <th>Prerequisites</th>
-                </tr>
-                <tr>
-                    <td>CMSC 201 - Computer Science I</td>
-                    <td>4</td>
-                    <td class="difficulty">3/5</td>
-                    <td class="prerequisites"> Math 151, (Gateway Course)</td>
-                </tr>
-                <tr>
-                    <td>MATH 151 - Calculus I</td>
-                    <td>4</td>
-                    <td class="difficulty">4/5</td>
-                </tr>
-                <tr>
-                    <td>CMSC 201 - Computer Science I</td>
-                    <td>4</td>
-                    <td class="difficulty">3/5</td>
-                </tr>
-                <tr>
-                    <td>CMSC 201 - Computer Science I</td>
-                    <td>4</td>
-                    <td class="difficulty">3/5</td>
-                </tr>
-                <tr>
-                    <td>CMSC 201 - Computer Science I</td>
-                    <td>4</td>
-                    <td class="difficulty">3/5</td>
-                </tr>
-            </table>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 201 - Computer Science I</td><td>4</td><th>3/5</th><th>MATH 150, MATH 151, MATH 152, or MATH 155 (Gateway Course)</th></tr>
+                    <tr><td>MATH 151 - Calculus I</td><td>4</td><th>4/5</th><th>MATH 150 or Score of 5 on the Math Placement Test</th></tr>
+                    <tr><td>Foreign Language - GEP</td><td>4</td></tr>
+                    <tr><td>ENGLISH - GEP</td><td>3</td></tr>
+                </table>
+            </div>
+            <h3>Spring</h3>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 202 - Computer Science II</td><td>4</td><th>4/5</th><th>CMSC 201, (MATH 150, MATH 151 or MATH 152) (Gateway Course)</th></tr>
+                    <tr><td>MATH 152 - Calculus II</td><td>4</td><th>4/5</th><th>MATH 151 or Score of 5 on the Math Placement Test</th></tr>
+                    <tr><td>CMSC 203 - Discrete Structures</td><td>3</td><th>4/5</th><th>MATH 151 (Gateway Course)</th></tr>
+                    <tr><td>Arts & Humanities - GEP</td><td>3</td></tr>
+                    <tr><td>Social Sciences - GEP</td><td>3</td></tr>
+                </table>
+            </div>
+
             <h2>Year Two</h2>
+            <h3>Fall</h3>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 331 - Principles of Programming Language</td><td>3</td><th>3/5</th><th>CMSC 202 and CMSC 203</th></tr>
+                    <tr><td>CMSC 341 - Data Structures</td><td>3</td><th>3/5</th><th>CMSC 202 and CMSC 203</th></tr>
+                    <tr><td>Science Sequence I</td><td>4</td></tr>
+                    <tr><td>Social Sciences - GEP</td><td>3</td></tr>
+                    <tr><td>Elective</td><td>3</td></tr>
+                </table>
+            </div>
+            <h3>Spring</h3>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 313 - Computer Organization</td><td>3</td><th>4/5</th><th>CMSC 201, (MATH 150, MATH 151 or MATH 152) (Gateway Course)</th></tr>
+                    <tr><td>MATH 221 - Linear Algebra</td><td>3</td></tr>
+                    <tr><td>Science Sequence II</td><td>4</td></tr>
+                    <tr><td>Science Lab</td><td>2</td></tr>
+                    <tr><td>SS GEP</td><td>3</td></tr>
+                </table>
+            </div>
+
             <h2>Year Three</h2>
+            <h3>Fall</h3>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 304 - Social & Ethical Issues</td><td>3</td><th>4/5</th><th>CMSC 201, (MATH 150, MATH 151 or MATH 152) (Gateway Course)</th></tr>
+                    <tr><td>CMSC 411 - Computer Architecture</td><td>3</td></tr>
+                    <tr><td>CMSC 4XX Elective</td><td>3</td></tr>
+                    <tr><td>STAT 355 - Probability & Statistics</td><td>4</td></tr>
+                </table>
+            </div>
+            <h3>Spring</h3>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 421 - Operating Systems</td><td>3</td><th>4/5</th><th>CMSC 201, (MATH 150, MATH 151 or MATH 152) (Gateway Course)</th></tr>
+                    <tr><td>CMSC 4XX Elective</td><td>3</td></tr>
+                    <tr><td>CMSC 4XX Elective</td><td>3</td></tr>
+                    <tr><td>AH GEP</td><td>3</td></tr>
+                    <tr><td>C GEP</td><td>3</td></tr>
+                </table>
+            </div>
+
             <h2>Year Four</h2>
+            <h3>Fall</h3>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 304 - Social & Ethical Issues</td><td>3</td><th>4/5</th><th>CMSC 201, (MATH 150, MATH 151 or MATH 152) (Gateway Course)</th></tr>
+                    <tr><td>CMSC 411 - Computer Architecture</td><td>3</td></tr>
+                    <tr><td>CMSC 4XX Elective</td><td>3</td></tr>
+                    <tr><td>STAT 355 - Probability & Statistics</td><td>4</td></tr>
+                </table>
+            </div>
+            <h3>Spring</h3>
+            <div class="table-container">
+                <table>
+                    <tr><th style="width:30%">Course</th><th style="width:10%">Credits</th><th style="width:10%">Difficulty</th><th style="width:60%">Pre-requisites</th></tr>
+                    <tr><td>CMSC 421 - Operating Systems</td><td>3</td><th>4/5</th><th>CMSC 201, (MATH 150, MATH 151 or MATH 152) (Gateway Course)</th></tr>
+                    <tr><td>CMSC 4XX Elective</td><td>3</td></tr>
+                    <tr><td>CMSC 4XX Elective</td><td>3</td></tr>
+                    <tr><td>AH GEP</td><td>3</td></tr>
+                    <tr><td>C GEP</td><td>3</td></tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>
