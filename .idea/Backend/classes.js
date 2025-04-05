@@ -13,16 +13,23 @@ class Plan
 
     init(list)
     {
+        //i is the current course
         for(let i = 0; i < list.length; i++)
         {
+            //x will be the amount of rows in the course's prereqs
             for(let x = 0; x < list[i].prereq.length; x++)
             {
-                for(let y = 0; y < list.length; y++)
+                //z will be the column number in the prereq row
+                for(let z = 0; z < list[i].prereq[x].length; z++)
                 {
-                    if(list[y].name === list[i].prereq[x])
+                    //y is going back through the main list's courses
+                    for (let y = 0; y < list.length; y++)
                     {
-                        list[i].prereq[x] = list[y];
-                        y = list.length;
+                        if (list[y].name === list[i].prereq[x][z])
+                        {
+                            list[i].prereq[x][z] = list[y];
+                            y = list.length;
+                        }
                     }
                 }
             }
@@ -43,7 +50,7 @@ class Course
         let credittemp= "";
         this.credits = 0;
         let prereqtemp = "";
-        this.prereq = [];
+        this.prereq = [[]];
         this.description = "";
         let proftemp = "";
         this.professors = [];
@@ -98,6 +105,7 @@ class Course
 
         //decodes prerequisites
         holder = 0;
+        let orr = 0;
         for(let i = 0; i < prereqtemp.length(); i++)
         {
             if(prereqtemp.charAt(i) == ",")
@@ -105,9 +113,14 @@ class Course
                 holder++;
                 i++;
             }
+            else if(prereqtemp.charAt(i) == "|")
+            {
+                orr++;
+                i++;
+            }
             else
             {
-                this.prereq[holder] = this.prereq[holder] + prereqtemp.charAt(i);
+                this.prereq[holder][orr] = this.prereq[holder][orr] + prereqtemp.charAt(i);
             }
         }
 
@@ -126,3 +139,4 @@ class Course
             }
         }
     }
+}
