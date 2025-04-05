@@ -13,7 +13,20 @@ class Plan
 
     init(list)
     {
-
+        for(let i = 0; i < list.length; i++)
+        {
+            for(let x = 0; x < list[i].prereq.length; x++)
+            {
+                for(let y = 0; y < list.length; y++)
+                {
+                    if(list[y].name === list[i].prereq[x])
+                    {
+                        list[i].prereq[x] = list[y];
+                        y = list.length;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -34,6 +47,7 @@ class Course
         this.description = "";
         let proftemp = "";
         this.professors = [];
+        this.semester = 0;
 
         let holder = 0;
         for(let i = 0; i < list.length(); i++)
@@ -45,7 +59,7 @@ class Course
             }
             else
             {
-                switch (holder) 
+                switch (holder)
                 {
                     case 0:
                         //finds the name of the course
@@ -112,4 +126,3 @@ class Course
             }
         }
     }
-}
