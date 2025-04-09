@@ -1,12 +1,14 @@
 {
   "dependencies": {
-    "mongodb": "^6.15.0"
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.2"
   },
   "name": "csmc-447-section-2--team-4",
   "version": "1.0.0",
   "description": "//Shree Ram",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
