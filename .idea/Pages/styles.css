@@ -104,15 +104,25 @@ body {
     height: 100vh;
 }
 
+.index_left-half, .index_right-half {
+    flex: 1;
+}
 .left-half, .right-half {
     flex: 1;
+}
+
+.index_right-half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
 }
 
 .right-half {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gold;
+    background-color: white;
 }
 
 .login-box {
@@ -249,6 +259,7 @@ p {
 
 .sidebar h2 {
     text-align: center;
+    color: white;
 }
 
 .sidebar ul {

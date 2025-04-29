@@ -6,6 +6,145 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>4YP</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Split Screen Layout */
+    .split-screen {
+      display: flex;
+      height: 100vh;
+    }
+
+    .left-half, .right-half {
+      flex: 1;
+    }
+
+    .right-half {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: gold;
+    }
+
+    .login-box {
+      background-color: White;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #000;
+    }
+
+    .input-container {
+      margin-bottom: 15px;
+    }
+
+    .input-container label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .input-container input:focus {
+      border-color: #ffcc00;
+      outline: none;
+    }
+
+    .button {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #e6b800;
+      color: #fff;
+    }
+
+    /* Left Half Styles */
+    .left-half {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Align items at the top */
+      align-items: center;
+      background-color: black; /* Light grey background */
+      padding: 20px;
+      height: 100vh; /* Ensure full height */
+      overflow: auto; /* Prevent overflow issues */
+    }
+
+    .left-header {
+      font-size: 3.5rem;
+      color: White;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      max-width: 90%; /* Limit width for better readability */
+    }
+
+    .key-features_header {
+      font-size: 1.5rem;
+      color: White;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .key-features {
+      font-size: 1.1rem;
+      color: white;
+      margin-bottom: 20px;
+      list-style-type: none;
+      padding: 0;
+      text-align: left; /* Align to the left for better readability */
+      width: 100%; /* Ensures the list takes up full available width */
+    }
+
+    .key-features li {
+      color: White;
+      margin-bottom: 10px;
+    }
+
+    .key-features strong {
+      color: white;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: white;
+      line-height: 1.6;
+    }
+
+  </style>
 </head>
 <body>
 
