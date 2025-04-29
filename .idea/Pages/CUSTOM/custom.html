@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,11 +63,27 @@
         .compare-btn button { padding:10px 20px; background-color:#f1c40f; color:black; border:none; border-radius:5px; cursor:pointer; }
         .compare-btn button:hover { background-color:#f39c12; }
         .compare-result { margin-top:20px; font-size:16px; color:#f1c40f; font-weight:bold; }
-
         .left-header { font-family:Arial,sans-serif; color:#d8d5d5; margin-bottom:10px; }
         .left-text { font-family:Verdana,sans-serif; color:#b3b3b3; text-align:justify; }
+         /*
+           Computer Science Button
+         */
+        .BTA{ display:flex;  justify-content:left;margin-top:20px;align-items:center;}
+        .BTA button {display:table-cell; flex-wrap:wrap; justify-content:space-evenly; align-items:center;  padding:10px 20px; background-color:#f1c40f; color:black; border:none; border-radius:10px; cursor:pointer; }
+        .BTA button:hover { background-color: #f39c12; }
+        .BTA button:active { background-color:rgba(58, 246, 29, 0.56) }
+
+        .cmsc-btn { margin-top:22px; }
+        .cmsc-btn button {display:table-cell; flex-wrap:wrap; justify-content:space-evenly; align-items:center;  padding:10px 20px; background-color:#f1c40f; color:black; border:none; border-radius:10px; cursor:pointer; }
+        .cmsc-btn button:hover { background-color:#f39c12; }
+        .cmsc-btn button:active { background-color: rgba(58, 246, 29, 0.56); }
+
+        .del-btn { margin-top:20px; }
+        .del-btn button { padding:10px 20px; background-color: rgba(234, 61, 61, 0.91); color:black; border:none; border-radius:5px; cursor:pointer; }
+        .del-btn button:hover { background-color: rgb(182, 41, 41); }
 
         @media(max-width:768px){ .left, .right { width:100%; left:0; right:0; position:relative; top:70px; height:auto; } }
+
     </style>
 </head>
 <body>
@@ -90,15 +106,25 @@
 </nav>
 
 <div class="split left">
-    <h2 class="left-header">4 Year Plan</h2>
+    <h2 class="left-header">4 Year Plan Pre Loaded Plan</h2>
     <p class="left-text">
         <br>
-        This place is going to hold information about class.
-        There will be drop down menu where  the user will be able to see classes.
-        And all the impormation pretenting to it.
-        Like there will be CMSC tab,where user can see all CMSC classes.
-        We can keep going futher in details there
+        Click on the button below to load the plan.
+        And You can edit it.
     </p>
+    // waiting for courses in database to implement others.
+    <div class="cmsc-btn">
+        <button id="cmsc-btn">CMSC </button>
+        <button id="CMPE-btn">CMPE </button>
+        <button id="CHEME-btn">CHEME </button>
+        <button id="MECHE-btn">MECHE </button>
+        <button id="IS-btn">IS </button>
+
+    </div>
+    <div class="BTA">
+        <button id="BTA-btn">BTA </button>
+
+    </div>
 
 </div>
 
@@ -128,15 +154,100 @@
     <div class="compare-btn">
         <button id="compareAcrossBtn">Check Plan</button>
     </div>
+    <div class="del-btn">
+        <button id="Del_ALL">Delete ALL</button>
+    </div>
     <div id="comparisonResult" class="compare-result"></div>
 </div>
 
 <script>
+   let pre_Loading=false;
+
+     async function createCMSC() {
+         if (!pre_Loading) {
+             // const CMSC201={courseId: "CMSC 201", prerequisites: ["MATH 101"]}
+             // const CMSC202={courseId: "CMSC 202", prerequisites: ["MATH 101"]}
+             // const CMSC203={courseId: "CMSC 203", prerequisites: ["MATH 101"]}
+             // const CMSC204={courseId: "CMSC 204", prerequisites: ["MATH 101"]}
+             // const CMSC205={courseId: "CMSC 205", prerequisites: ["MATH 101"]}
+             // const CMSC206={courseId: "CMSC 206", prerequisites: ["MATH 101"]}
+             // const CMSC207={courseId: "CMSC 207", prerequisites: ["MATH 101"]}
+             // const CMSC208={courseId: "CMSC 208", prerequisites: ["MATH 101"]}
+             // const mockCourses = [CMSC201,CMSC202,CMSC203,CMSC204,CMSC205,CMSC206,CMSC207,CMSC208]
+             // const mockSem= ['box1','box2','box3','box4','box5','box6','box7','box8']
+             // for( i in mockCourses){
+             //     createDraggableCourse_rigged(mockCourses[i],mockSem[i]) }
+             const id = "CMSC 104"
+             const id2 = "CMSC 201"
+             // try {
+             //     const res = await fetch(`http://localhost:8080/api/course/${encodeURIComponent(id)}`);
+             //     if (!res.ok) {
+             //         console.log(await res.text());
+             //         return alert('Course not found');
+             //     }
+             //     const course = await res.json();
+             //     createDraggableCourse_rigged(course,'box1');
+             // } catch (e) {
+             //     console.error(e);
+             //     alert('Error fetching course');
+             // }
+      // hello
+
+             const plan = [
+                 {id: "CMSC 201", box: "box1"},  // Sem 1
+                 {id: "CMSC 202", box: "box2"},  // Sem 2
+                 {id: "CMSC 203", box: "box2"},  // also Sem 2
+                 {id: "CMSC 341", box: "box3"}   // Sem 3
+             ];
+             for (const {id, box} of plan) {
+                 await rigged_object_class(id, box);
+             }
+
+             pre_Loading = true;
+             // TODO need to add if delete adn content is 0 then turn preload = false
+         } else {
+             alert("Courses Loaded already");
+         }
+
+     }
+    // have like a note saying clear all before importing
+    async function rigged_object_class(course_id,semester_id) {
+
+        try {
+            const res = await fetch(`http://localhost:8080/api/course/${encodeURIComponent(course_id)}`);
+            if (!res.ok) {
+                console.log(await res.text());
+                return alert('Course not found');
+            }
+            const course = await res.json();
+            createDraggableCourseTo(course,semester_id);
+        } catch (e) {
+            console.error(e);
+            alert('Error fetching course');
+        }
+    }
+
+   function createDraggableCourseTo(course, boxId) {
+       const el = document.createElement('div');
+       el.className = 'draggable';
+       el.textContent = course.courseId;
+       el.dataset.course = JSON.stringify(course);
+       el.id = `draggable-${course.courseId.replace(/\s+/g,'-')}-${Date.now()}`;
+       el.draggable = true;
+       el.addEventListener('dragstart', handleDragStart);
+       el.addEventListener('click', () => setActiveElement(el));
+       const container = document.getElementById(boxId);
+       const items = container.querySelector('.box-items') || container;
+       items.appendChild(el);
+   }
+
+
     let activeElement = null;
 
     // 1) Fetch & create a draggable course tile
     async function searchCourse() {
         const id = document.getElementById('courseSearchInput').value.trim();
+
         if (!id) return alert('Enter a Course ID');
         try {
             const res = await fetch(`http://localhost:8080/api/course/${encodeURIComponent(id)}`);
@@ -152,6 +263,8 @@
         }
     }
 
+    // it auto populated adn dur to that it does not see it but when I move it in the next on eit work
+
     // 2) Create a draggable element for a Course object
     function createDraggableCourse(course) {
         const el = document.createElement('div');
@@ -163,6 +276,19 @@
         el.addEventListener('dragstart', handleDragStart);
         el.addEventListener('click', () => setActiveElement(el));
         document.getElementById('box0').appendChild(el);
+    }
+    function createDraggableCourse_rigged(course,semester) {
+        const el = document.createElement('div');
+        el.className = 'draggable';
+        el.textContent = course.courseId;
+        el.dataset.course = JSON.stringify(course);
+        el.id = `draggable-${course.courseId.replace(/\s+/g,'-')}-${Date.now()}`;
+        el.draggable = true;
+        el.addEventListener('dragstart', handleDragStart);
+        el.addEventListener('click', () => setActiveElement(el));
+        document.getElementById(semester).appendChild(el);
+        // jsut needs to darag it once
+
     }
 
     // 3) Drag start: stash the element’s ID
@@ -210,6 +336,15 @@
         activeElement = null;
     }
 
+    function deleteAllElements() {
+            if(confirm('Do you want to delete all courses?')){
+                alert('Deleteing all courses');
+            }else{
+                alert('Course still here');
+            }
+
+    }
+
     // 0) Quick sanity check: did DataAlgo.js attach itself?
     console.log('🛠️ DataAlgo loaded?', 'checkCourseSequence=', typeof window.checkCourseSequence, 'checkPrerequisites=', typeof window.checkPrerequisites);
 
@@ -240,10 +375,15 @@
     document.addEventListener('DOMContentLoaded', () => {
         initDragAndDrop();
         document.getElementById('searchBtn').addEventListener('click', searchCourse);
-        document.getElementById('compareAcrossBtn').addEventListener('click', compareAcross);
+        document.getElementById('cmsc-btn').addEventListener('click', createCMSC);
+        document.getElementById('compareAcrossBtn').addEventListener('click', compareAcross)
+        document.getElementById('Del_ALL').addEventListener('click', deleteAllElements);
+
         document.getElementById('DelBox').addEventListener('click', deleteElement);
     });
 </script>
 
 </body>
+
+
 </html>
